@@ -42,7 +42,7 @@ jobs:
         with:
           java-version: 14
       - run: mvn -B package --file pom.xml -DskipTests
-      - run: mkdir staging && cp target/*jar-with-dependencies.jarstaging
+      - run: mkdir staging && cp target/*jar-with-dependencies.jar staging
       - uses: actions/upload-artifact@v3.1.2
         with:
           name: Package
