@@ -34,7 +34,7 @@ jobs:
       - name: Build and test project with maven
         run: mvn -B package --file pom.xml
   publish-job:
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     needs: [build_and_test]
     steps:
       - uses: actions/checkout@v3.3.0
